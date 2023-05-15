@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/registration-form/node_modules
+/registration-form/.pnp
+/registration-form/.pnp.js
+
+# testing
+/registration-form/coverage
+
+# production
+/registration-form/build
+
+# misc
+/registration-form/.DS_Store
+/registration-form/.env.local
+/registration-form/.env.development.local
+/registration-form/.env.test.local
+/registration-form/.env.production.local
+
+/registration-form/npm-debug.log*
+/registration-form/yarn-debug.log*
+/registration-form/yarn-error.log*
