@@ -1,5 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+
+###########################################
+#         registration-form               #
+###########################################
+
+
 # dependencies
 /registration-form/node_modules
 /registration-form/.pnp
@@ -21,3 +27,33 @@
 /registration-form/npm-debug.log*
 /registration-form/yarn-debug.log*
 /registration-form/yarn-error.log*
+
+
+
+###########################################
+#       registration-form-formik          #
+###########################################
+
+
+
+# dependencies
+/registration-form-formik/node_modules
+/registration-form-formik/.pnp
+/registration-form-formik/.pnp.js
+
+# testing
+/registration-form-formik/coverage
+
+# production
+/registration-form-formik/build
+
+# misc
+/registration-form-formik/.DS_Store
+/registration-form-formik/.env.local
+/registration-form-formik/.env.development.local
+/registration-form-formik/.env.test.local
+/registration-form-formik/.env.production.local
+
+/registration-form-formik/npm-debug.log*
+/registration-form-formik/yarn-debug.log*
+/registration-form-formik/yarn-error.log*
