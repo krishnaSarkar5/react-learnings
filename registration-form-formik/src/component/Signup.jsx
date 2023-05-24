@@ -2,9 +2,8 @@ import { Form, Formik } from 'formik'
 import React, { useState } from 'react'
 import TextField from './TextField'
 import * as Yup from 'yup';
-import Alert from './Alert';
 
-const Signup = () => {
+const Signup = (props) => {
 
 
     const [submitSuccess,setSubmitSuccess] = useState(false);
@@ -23,12 +22,12 @@ const Signup = () => {
 
     const handleSubmit= (values)=>{
         console.log(values);
-        setSubmitSuccess(true);
+        props.setSubmitSuccess(true);
     }
 
     const handleReset= (values)=>{
         console.log(values);
-        setSubmitSuccess(false);
+        props.setSubmitSuccess(false);
     }
 
 
@@ -50,11 +49,12 @@ const Signup = () => {
         validationSchema={validation}
         onSubmit={handleSubmit}
         onReset={handleReset}
+        
     >
        {formik=>(
         
         <div>
-             {submitSuccess && <Alert type="success" message="Register Successfully"/>}
+            
            <Form>
                 <h1 className='my-4 font-weight-bold-display-4'>Signup</h1>
                 <TextField label="First Name" type="text" name="firstName"/>
@@ -63,7 +63,7 @@ const Signup = () => {
                 <TextField label="Phone" type="text" name="phone"/>
                 <TextField label="Password" type="password" name="password"/>
                 <TextField label="Confrim Password" type="password" name="confirmPassword"/>
-                <button className='btn btn-primary mt-3 ml-2' type='submit'>Register</button>
+                <button className='btn btn-primary mt-3 ml-2' type='submit' >Register</button>
                 <button className='btn btn-danger mt-3 ml-10' type='reset'>Reset</button>
             </Form>
            
