@@ -4,12 +4,17 @@ import TextField from './TextField'
 import * as Yup from 'yup'
 import { Link } from 'react-router-dom'
 import {frontEndPaths} from '../routes/RoutePath'
+import {authenticate} from '../services/AuthenticationService'
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 
-const LoginForm = () => {
+
+const LoginForm = (props) => {
+
+    const navigate = useNavigate();
 
     const validation = Yup.object({
         email:Yup.string().email("Enter a valid email id").required("Email is required"),
@@ -24,8 +29,20 @@ const LoginForm = () => {
     }
 
 
+    const authenticateUser=(values)=>{
+      const response =  authenticate(values.email,values.password)
+        if(response.status){
+            props.setIsLoggedIn(true);
+            navigate(frontEndPaths.dashboard)
+            console.log("login success")
+        }
+
+    }
+
     const handelSubmit = (values)=>{
         console.log(values);
+        authenticateUser(values);
+       
     }
 
   return (

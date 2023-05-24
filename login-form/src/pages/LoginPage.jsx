@@ -2,7 +2,7 @@ import React from 'react'
 import LoginImage from '../assests/login.webp'
 import LoginForm from '../components/LoginForm'
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   return (
     
         <div className='container mt-5'>
@@ -11,7 +11,7 @@ const LoginPage = () => {
                     <img className='image-fluid w-100' src={LoginImage} alt=''/>
                 </div>
                 <div className='col-md-5'>
-                    <LoginForm/>
+                    <LoginForm setIsLoggedIn={props.setIsLoggedIn}/>
                 </div>
             </div>
         </div>
