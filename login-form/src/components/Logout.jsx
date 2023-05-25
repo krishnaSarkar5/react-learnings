@@ -11,6 +11,9 @@ console.log(isLoggedIn)
 
  if(isLoggedIn){
     console.log("inside logout funtion")
+
+   // further call backend logout api and check the response
+
     removeLoggedInData();
     setIsLoggedIn(2)
  }
