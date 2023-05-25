@@ -8,3 +8,7 @@ export const saveToSessionStorage=(key,value)=>{
 export const getfromSessionStorage=(key)=>{
    return JSON.parse(sessionStorage.getItem(key));
 }
+
+export const removeLoggedInData=(key)=>{
+    sessionStorage.removeItem("loginData");
+}

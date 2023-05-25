@@ -11,15 +11,13 @@ const Dashboard = () => {
        setUserData(data)
     },[])
 
-    const getLoggedInData=()=>{
-        return getUserLoggedInData();
-    }
-
-
     const getLoggedInUserData=()=>{
        const response = getLoggedInData();
       return getUserData(response?.email);
     }
+    const getLoggedInData=()=>{
+      return getUserLoggedInData();
+  }
 
   return (
     <div>Dashboard {userData.firstName} </div>

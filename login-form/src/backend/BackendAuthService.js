@@ -10,7 +10,7 @@ const authenticateUser= (email,password)=>{
     
     const userData = getUserData(email);
 
-    if(userData===undefined){
+    if(userData===undefined || userData===null){
         return failureResponse(appMessage.invalidCredential,null);
     }
     else if(userData.password===password){

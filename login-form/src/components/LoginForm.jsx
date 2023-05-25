@@ -1,20 +1,23 @@
 import { Form, Formik } from 'formik'
-import React from 'react'
+import React, { useContext } from 'react'
 import TextField from './TextField'
 import * as Yup from 'yup'
 import { Link } from 'react-router-dom'
 import {frontEndPaths} from '../routes/RoutePath'
 import {authenticate} from '../services/AuthenticationService'
 import { useNavigate } from 'react-router-dom'
+import {LoginContext} from '../App'
 
 
 
 
 
 
-const LoginForm = (props) => {
+const LoginForm = () => {
 
     const navigate = useNavigate();
+
+    const {setIsLoggedIn} = useContext(LoginContext);
 
     const validation = Yup.object({
         email:Yup.string().email("Enter a valid email id").required("Email is required"),
@@ -31,10 +34,14 @@ const LoginForm = (props) => {
 
     const authenticateUser=(values)=>{
       const response =  authenticate(values.email,values.password)
+
+      console.log(response)
         if(response.status){
-            props.setIsLoggedIn(true);
+            setIsLoggedIn(1);
             navigate(frontEndPaths.dashboard)
             console.log("login success")
+        }else{
+            setIsLoggedIn(3);
         }
 
     }

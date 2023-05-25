@@ -2,5 +2,6 @@
 export const frontEndPaths = {
     login:"/login",
     signup:"/",
-    dashboard:"/dashboard"
+    dashboard:"/dashboard",
+    logout:"/logout"
 }
