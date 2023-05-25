@@ -8,7 +8,7 @@ import {frontEndPaths} from '../routes/RoutePath'
 const SignupPage = () => {
     const [submitSuccess,setSubmitSuccess] = useState(false);
   return (
-    <div className='container mt-5'>
+    <div className='container mt-5' >
          {submitSuccess && <Alert type="success" message="Registered Successfully"/>}
       <div className='row'>
         <div className='col-md-5'>

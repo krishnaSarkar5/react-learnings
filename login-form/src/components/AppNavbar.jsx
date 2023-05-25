@@ -1,13 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Logout} from './Logout';
 import {LoginContext} from '../App'
 import {  useNavigate } from 'react-router-dom';
+import { getUserData, getUserLoggedInData } from '../services/UserService';
 
 const AppNavbar = () => {
    const {isLoggedIn,setIsLoggedIn} = useContext(LoginContext);
+   const [userData,setUserData] = useState()
+
+
+   useEffect(()=>{
+   const response = getUserLoggedInData();
+   const data =  getUserData(response?.email)
+   setUserData(data)
+   },[])
 
  const navigate = useNavigate();
   return (
@@ -32,6 +41,8 @@ const AppNavbar = () => {
             </NavDropdown> */}
           </Nav>
           <Nav>
+            {/* <Nav.Text>ABC</Nav.Text> */}
+            <Nav.Link>{userData?.firstName} {userData?.lastName}</Nav.Link>
             <Nav.Link onClick={()=>{
               Logout(isLoggedIn,setIsLoggedIn)
             navigate("/login")

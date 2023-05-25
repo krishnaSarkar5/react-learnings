@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   return (
     
-        <div className='container mt-5'>
+        <div className='container shadow mt-5 p-5'>
             {isLoggedIn===2? <  Alert  type="success"  message={appMessage.loggedOut}/> :null}
             {isLoggedIn===3? <  Alert  type="danger"  message={appMessage.invalidCredential}/> : null}
             <div className='row'>
