@@ -57,3 +57,34 @@
 /registration-form-formik/npm-debug.log*
 /registration-form-formik/yarn-debug.log*
 /registration-form-formik/yarn-error.log*
+
+
+
+
+########################
+#       login          #
+########################
+
+
+
+# dependencies
+/login-form/node_modules
+/login-form/.pnp
+/login-form/.pnp.js
+
+# testing
+/login-form/coverage
+
+# production
+/login-form/build
+
+# misc
+/login-form/.DS_Store
+/login-form/.env.local
+/login-form/.env.development.local
+/login-form/.env.test.local
+/login-form/.env.production.local
+
+/login-form/npm-debug.log*
+/login-form/yarn-debug.log*
+/login-form/yarn-error.log*
