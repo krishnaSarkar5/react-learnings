@@ -1,9 +1,14 @@
 import React from 'react'
 import './Feed.css'
+import Share from './Share'
 
 const Feed = () => {
   return (
-    <div className='feed'>Feed</div>
+    <div className='feed'>
+        <div className="feedWrapper">
+            <Share/>
+        </div>       
+    </div>
   )
 }
 

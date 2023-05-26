@@ -9,6 +9,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import GroupIcon from '@mui/icons-material/Group';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import FriendList from './FriendList';
 
 const Leftbar = () => {
   return (
@@ -63,7 +64,8 @@ const Leftbar = () => {
             </ul>
             <button className="leftbarButton">Show More</button>
             <hr className="leftbarHr" />
-            <ul className="leftbarFriendList">
+            <FriendList/>
+            {/* <ul className="leftbarFriendList">
                 <li className="leftbarFriend">
                     <img src="/assets/person/2.jpeg" alt="" className="leftbarFriendImg" />
                     <span className="leftbarFriendName">Rahul Sen</span>
@@ -96,7 +98,7 @@ const Leftbar = () => {
                     <img src="/assets/person/2.jpeg" alt="" className="leftbarFriendImg" />
                     <span className="leftbarFriendName">Rahul Sen</span>
                 </li>
-            </ul>
+            </ul> */}
         </div>
     </div>
   )
