@@ -9,11 +9,11 @@ import Rightbar from '../../components/rightbar/Rightbar'
 const Home = () => {
   return (
     <>
-      <Topbar/>
-      <div className='home'>
-        <Leftbar/>
-        <Feed/>
-        <Rightbar/>
+        <Topbar/>  
+        <div className='home'>
+          <Leftbar/>
+          <Feed/>
+          <Rightbar/>
       </div>
     </>
     
