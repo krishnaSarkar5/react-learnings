@@ -88,3 +88,32 @@
 /login-form/npm-debug.log*
 /login-form/yarn-debug.log*
 /login-form/yarn-error.log*
+
+
+########################
+#       socialapp      #
+########################
+
+
+
+# dependencies
+/socialapp/node_modules
+/socialapp/.pnp
+/socialapp/.pnp.js
+
+# testing
+/socialapp/coverage
+
+# production
+/socialapp/build
+
+# misc
+/socialapp/.DS_Store
+/socialapp/.env.local
+/socialapp/.env.development.local
+/socialapp/.env.test.local
+/socialapp/.env.production.local
+
+/socialapp/npm-debug.log*
+/socialapp/yarn-debug.log*
+/socialapp/yarn-error.log*
