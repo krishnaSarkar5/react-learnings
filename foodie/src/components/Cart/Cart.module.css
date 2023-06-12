@@ -5,6 +5,23 @@
     max-height: 20rem;
     overflow: auto;
   }
+
+  .cart-items::-webkit-scrollbar {
+    width: 4px; /* width of the scrollbar */
+  }
+  
+  .cart-items::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the track */
+  }
+  
+  .cart-items::-webkit-scrollbar-thumb {
+    background: #8888888f; /* color of the thumb */
+    border-radius: 4px; /* roundness of the thumb */
+  }
+  
+  .cart-items::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the thumb on hover */
+  }
   
   .total {
     display: flex;
