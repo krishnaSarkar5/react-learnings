@@ -1,0 +1,8 @@
+.keypadRow{
+    display: flex;
+}
+
+.keypadCol{
+    justify-content: space-around;
+    margin: 5px 8px 5px 8px;
+}

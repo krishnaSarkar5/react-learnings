@@ -1,0 +1,15 @@
+.buttonContainer{
+    background-color: aqua;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonValue{
+    text-align: center;
+    font-size: 30px;
+}
+

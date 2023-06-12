@@ -13,7 +13,7 @@ import FriendList from './FriendList';
 
 const Leftbar = () => {
   return (
-    <div className='left'>
+    <div className='leftbar'>
         <div className="leftbarWrapper">
             <ul className="leftbarList">
                 <li className="leftbarListItem">

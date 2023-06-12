@@ -117,3 +117,89 @@
 /socialapp/npm-debug.log*
 /socialapp/yarn-debug.log*
 /socialapp/yarn-error.log*
+
+########################
+#      calculator      #
+########################
+
+
+
+# dependencies
+/calculator/node_modules
+/calculator/.pnp
+/calculator/.pnp.js
+
+# testing
+/calculator/coverage
+
+# production
+/calculator/build
+
+# misc
+/calculator/.DS_Store
+/calculator/.env.local
+/calculator/.env.development.local
+/calculator/.env.test.local
+/calculator/.env.production.local
+
+/calculator/npm-debug.log*
+/calculator/yarn-debug.log*
+/calculator/yarn-error.log*
+
+
+########################
+#      click-me        #
+########################
+
+
+
+# dependencies
+/click-me/node_modules
+/click-me/.pnp
+/click-me/.pnp.js
+
+# testing
+/click-me/coverage
+
+# production
+/click-me/build
+
+# misc
+/click-me/.DS_Store
+/click-me/.env.local
+/click-me/.env.development.local
+/click-me/.env.test.local
+/click-me/.env.production.local
+
+/click-me/npm-debug.log*
+/click-me/yarn-debug.log*
+/click-me/yarn-error.log*
+
+
+########################
+#      foodie        #
+########################
+
+
+
+# dependencies
+/foodie/node_modules
+/foodie/.pnp
+/foodie/.pnp.js
+
+# testing
+/foodie/coverage
+
+# production
+/foodie/build
+
+# misc
+/foodie/.DS_Store
+/foodie/.env.local
+/foodie/.env.development.local
+/foodie/.env.test.local
+/foodie/.env.production.local
+
+/foodie/npm-debug.log*
+/foodie/yarn-debug.log*
+/foodie/yarn-error.log*
