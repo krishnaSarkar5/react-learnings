@@ -5,12 +5,21 @@ import CartContext from '../../store/cart-store'
 
 const MealItemForm = (props) => {
 
+
+  
+
   const cartCtx = useContext(CartContext);
 
     const [isAmountValid,setIsAmountValid] = useState(true);
 
 
     const amountInputRef = useRef();
+
+    setTimeout(() => {
+
+      if(!isAmountValid){
+          setIsAmountValid(true);
+      }}, 3000);
 
 
     const submitHandler = (event)=>{
@@ -48,8 +57,8 @@ const MealItemForm = (props) => {
          label="Amount" 
          input={{id:'amount',
                 type:"number",
-                // min:'1',
-                // max:'5',
+                min:'1',
+                max:'5',
                 step:'1',
                 defaultValue:'1'}} />
         <button>+ Add</button>

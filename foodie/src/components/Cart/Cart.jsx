@@ -38,7 +38,7 @@ const Cart = (props) => {
         </div>
         <div className={classes.actions}>
           <button className={classes['button-alt']} onClick={props.onClose}>Close</button>
-          {hasItem && <button className={classes.button}>Order</button>}
+          {hasItem && <button className={classes.button} onClick={()=>{console.log("order placed ",{items:cartCtx.items,price:cartCtx.totalAmount})}}>Order</button>}
         </div>
     </Modal>
   )

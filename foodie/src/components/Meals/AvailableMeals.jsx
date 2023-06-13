@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './AvailableMeals.module.css'
 import MealItem from './MealItem'
 import Card from '../UI/Card'
+import useHttp from '../../hooks/use-http'
+import {MEALS_API} from '../../utility/ExternalApi'
+import { Loader } from 'rsuite';
 
 const DUMMY_MEAL = [
     {
@@ -38,16 +41,42 @@ const DUMMY_MEAL = [
 
 const AvailableMeals = () => {
 
-    const mealsList = DUMMY_MEAL.map(meal=><MealItem key={meal.id} id={meal.id} meal={meal} />);
+
+    const { data, loading, error, get, post } = useHttp();
+
+    useEffect(() => {
+      // Call the API when the component mounts
+      get(MEALS_API);
+    }, []);
+
+    console.log(data)
+
+    let  content;
+
+    if (loading) {
+        content =  <Loader size="lg" style={{display:"flex",justifyContent:"center",alignItems:"center"}}/>;
+      }
+    
+      if (error) {
+        content = <div>Error: {error.message}</div>;
+      }
+
+      if(data){
+        content = <Card>{
+            data?.map(meal=><MealItem key={meal.id} id={meal.id} meal={meal} />)
+         }
+     </Card>;
+      }
+
+
+    // const mealsList = data?.map(meal=><MealItem key={meal.id} id={meal.id} meal={meal} />);
 
   return (
    <section className={classes.meals} >
         <ul>
-        <Card>{
-               mealsList
-            }
-            </Card>
+            {content}        
         </ul>
+        
    </section>
   )
 }
