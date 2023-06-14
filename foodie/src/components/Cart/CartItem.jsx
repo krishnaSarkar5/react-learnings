@@ -1,7 +1,11 @@
 import classes from './CartItem.module.css';
+import CartContext from '../../store/cart-store';
+import { useContext } from 'react';
 
 const CartItem = (props) => {
   const price = `₹${props.price.toFixed(2)}`;
+  const cartCtx = useContext(CartContext);
+  console.log(cartCtx.orderStatus)
 
   return (
     <li className={classes['cart-item']}>
@@ -13,10 +17,10 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={props.onRemove}>−</button>
-        {props.amount<5 && <button onClick={props.onAdd}>+</button>}
+         <button onClick={props.onRemove}>−</button>
+        {props.amount<5 &&  <button onClick={props.onAdd}>+</button>}
       </div>
-    </li>
+    </li> 
   );
 };
 

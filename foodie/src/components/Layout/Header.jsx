@@ -7,9 +7,11 @@ import HeaderCartButton from './HeaderCartButton'
 const Header = (props) => {
   return (
     <>
-        <header className={classes.header} >
+        <header  >
+          <div className={classes.header}>
             <h1>Foodie</h1>
             <HeaderCartButton onShow={props.onShow}/>
+          </div>        
         </header>
         
         <div className={classes['main-image']}>
