@@ -177,7 +177,7 @@
 
 
 ########################
-#      foodie        #
+#        foodie        #
 ########################
 
 
@@ -203,3 +203,60 @@
 /foodie/npm-debug.log*
 /foodie/yarn-debug.log*
 /foodie/yarn-error.log*
+
+
+################################
+#      redux-counter-demo      #
+################################
+
+# dependencies
+/redux-counter-demo/node_modules
+/redux-counter-demo/.pnp
+/redux-counter-demo/.pnp.js
+
+# testing
+/redux-counter-demo/coverage
+
+# production
+/redux-counter-demo/build
+
+# misc
+/redux-counter-demo/.DS_Store
+/redux-counter-demo/.env.local
+/redux-counter-demo/.env.development.local
+/redux-counter-demo/.env.test.local
+/redux-counter-demo/.env.production.local
+
+/redux-counter-demo/npm-debug.log*
+/redux-counter-demo/yarn-debug.log*
+/redux-counter-demo/yarn-error.log*
+
+
+
+########################################
+#      redux-toolkit-demo-counter      #
+########################################
+
+# dependencies
+/redux-toolkit-demo-counter/node_modules
+/redux-toolkit-demo-counter/.pnp
+/redux-toolkit-demo-counter/.pnp.js
+
+# testing
+/redux-toolkit-demo-counter/coverage
+
+# production
+/redux-toolkit-demo-counter/build
+
+# misc
+/redux-toolkit-demo-counter/.DS_Store
+/redux-toolkit-demo-counter/.env.local
+/redux-toolkit-demo-counter/.env.development.local
+/redux-toolkit-demo-counter/.env.test.local
+/redux-toolkit-demo-counter/.env.production.local
+
+/redux-toolkit-demo-counter/npm-debug.log*
+/redux-toolkit-demo-counter/yarn-debug.log*
+/redux-toolkit-demo-counter/yarn-error.log*
+
+
