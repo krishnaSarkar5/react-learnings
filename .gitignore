@@ -260,3 +260,30 @@
 /redux-toolkit-demo-counter/yarn-error.log*
 
 
+########################################
+#        advanced-redux-toolkit        #
+########################################
+
+
+
+# dependencies
+/advanced-redux-toolkit/node_modules
+/advanced-redux-toolkit/.pnp
+/advanced-redux-toolkit/.pnp.js
+
+# testing
+/advanced-redux-toolkit/coverage
+
+# production
+/advanced-redux-toolkit/build
+
+# misc
+/advanced-redux-toolkit/.DS_Store
+/advanced-redux-toolkit/.env.local
+/advanced-redux-toolkit/.env.development.local
+/advanced-redux-toolkit/.env.test.local
+/advanced-redux-toolkit/.env.production.local
+
+/advanced-redux-toolkit/npm-debug.log*
+/advanced-redux-toolkit/yarn-debug.log*
+/advanced-redux-toolkit/yarn-error.log*
